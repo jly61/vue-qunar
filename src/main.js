@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import fastClick from 'fastclick'
-import './assets/css/normalize.css'
-import './assets/css/border.css'
+import 'style/reset.css'
+import 'style/border.css'
+
+
 
 
 

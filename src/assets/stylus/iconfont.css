@@ -1,0 +1,30 @@
+@font-face {font-family: "iconfont";
+  src: url('./iconfont/iconfont.eot?t=1571542254150'); /* IE9 */
+  src: url('./iconfont/iconfont.eot?t=1571542254150#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANMAAsAAAAAB0wAAAMAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqCDIFxATYCJAMQCwoABCAFhG0HQxteBsgeg207eZzEvHxNQBidEVBj6R48okqiABVaHh8VBVgg4WurWstCJrosDNoKEzTi563LzxZiKi1vhT1IZmeVfZlMdZLO/SBv0BH0recmQAC+z3M5vVHi81ttt7VsrEVj0VEvwHhrQHtjlEhcIAl6w9gFLuE+AVUTcml2qhs7gZfMWhYQnssSB7xyEVlm+bKgWLM3C28UlOOr+Auvw++He0uViQqJtXb3YZUISq+Cv0+6To+m7fsE9XwusEMkLAIy4XGt55RrnFnkqqpNdrMGKCuLzDVU/31ycxPZ2LHS/ssjChKhyCqugxWUTVwFu0IiV/VCAleTRRL8kMVlFLEFeILY/TeLgtTTdP3q+Shw7Xv0tkzx2J3sLRH4xMGco2maF6sReMtMpLR17fh0mIjWp49xz793v/jR8+xb19OvU0+fdj571vXiRc/z50Ndrd1brj5InPD36/KvMsZnFmqk917jtLgVgB/F/m8/7V6JXfGqt8eYYrYvLi0uRpXgb99Dt/AI93+2axD+MAhGhLv9g2OGEf69hTOut7eunuzl7c8zbpf55mb+xc2vAxevX1u+dh0csxami/iZ0c34MZV+/N+Y+eXdkcDCDS/fDP4/2vgfNoyms/SSL6jurf7U6p5NWdda1pxVnasyfNnYBaciqradD1yg6/0clkHvYoKyQYqoZBxJ2SSZ2YsoqFlBUdk6qhbUHK7poVyFXMG8BYCg7Syipp9I2u6Rmf0OBUP/UNQuoWovhJ5ZM90TnwqKOIZEyE9CWSAO7NiZT1TajiTVxtGsNuR0I6rIcWjQ6ov5GuRAdI4NyphkZAxDTIkdVoPHkM1GoJMSCxKY1syYM1+nw3Uv0grEDnxsoxAOg4gg3iRIJiAcsN+e8Sl9vh0iUdlwaAujptgNoRTy6JCBlr4HWWNy9GLcyzOKMRIjhsEgjCLsoGrgQmx2hoCc9bMsEAGjZR6RcsqnQ61wX5N2fYv9C3dAlXVWDjGkkENB6anMORhRPXAw1azKHgpRFZUAAA==') format('woff2'),
+  url('./iconfont/iconfont.woff?t=1571542254150') format('woff'),
+  url('./iconfont/iconfont.ttf?t=1571542254150') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./iconfont/iconfont.svg?t=1571542254150#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*.iconjiantou:before {*/
+/*  content: "\e64a";*/
+/*}*/
+
+/*.iconfanhui:before {*/
+/*  content: "\e611";*/
+/*}*/
+
+/*.iconsousuo:before {*/
+/*  content: "\e679";*/
+/*}*/
+
