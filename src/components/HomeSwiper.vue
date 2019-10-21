@@ -10,8 +10,6 @@
 </template>
 
 <script>
-    import {Swiper, Slide} from 'vue-swiper-component'
-
     export default {
         name: "HomeSwiper",
         data() {
@@ -34,10 +32,6 @@
                     }
                 ]
             };
-        },
-        components: {
-            Swiper,
-            Slide
         },
         mounted() {
             for (let i = 0; i < this.imgList; i++) {
