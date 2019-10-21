@@ -5,12 +5,8 @@ import 'style/reset.css'
 import 'style/border.css'
 
 
-
-
-
 Vue.config.productionTip = false
 fastClick.attach(document.body)
-
 new Vue({
   render: h => h(App),
 }).$mount('#app')
