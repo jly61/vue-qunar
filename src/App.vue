@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <home></home>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from './pages/Home'
 export default {
   name: 'app',
   components: {
-    Home
   }
 }
 </script>
@@ -17,5 +15,6 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  touch-action: none
 }
 </style>

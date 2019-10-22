@@ -2,7 +2,7 @@
     <div>
         <Swiper :showIndicator='true' class="swiper" v-if="showSwiper">
             <Slide class="swiper-slide" v-for="item in swiperList" :key="item.id">
-                <img class="swiper-img" :src="item.url" :alt="item.alt">
+                <img class="swiper-img" :src="item.imgUrl" :alt="item.alt">
             </Slide>
         </Swiper>
     </div>

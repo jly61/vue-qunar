@@ -4,9 +4,9 @@
             <div class="icons">
                 <div class="icon" v-for="item in page" :key="item.id">
                     <div class="icon-img">
-                        <img class="icon-img-content" :src="item.url" :alt="item.title">
+                        <img class="icon-img-content" :src="item.imgUrl" :alt="item.title">
                     </div>
-                    <p class="icon-title">{{item.title}}</p>
+                    <p class="icon-title">{{item.desc}}</p>
                 </div>
             </div>
         </Slide>
