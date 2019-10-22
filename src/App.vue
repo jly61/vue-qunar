@@ -15,6 +15,6 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  touch-action: none
+  touch-action: none;
 }
 </style>
