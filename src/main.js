@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 import fastClick from 'fastclick'
 import 'style/reset.css'
 import 'style/border.css'
@@ -11,5 +12,7 @@ fastClick.attach(document.body)
 Vue.component('Swiper', Swiper)
 Vue.component('Slide', Slide)
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
+
 }).$mount('#app')

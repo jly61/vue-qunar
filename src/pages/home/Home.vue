@@ -10,11 +10,11 @@
 
 <script>
     import axios from 'axios'
-    import HomeHeader from '../components/HomeHeader'
-    import HomeSwiper from '../components/HomeSwiper'
-    import HomeIcons from '../components/HomeIcons'
-    import HomeCommend from '../components/HomeRecommend'
-    import HomeWeekend from '../components/HomeWeekend'
+    import HomeHeader from './components/HomeHeader'
+    import HomeSwiper from './components/HomeSwiper'
+    import HomeIcons from './components/HomeIcons'
+    import HomeCommend from './components/HomeRecommend'
+    import HomeWeekend from './components/HomeWeekend'
 
     export default {
         name: "Home",
@@ -44,6 +44,7 @@
                 axios.get('/api/index.json').then(this.getHomeInfoSucc)
             },
             getHomeInfoSucc(res) {
+                console.log(res);
                 if(res.data.status === 0) {
                     const data = res.data.data;
                     this.city = data.city;
