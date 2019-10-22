@@ -28,7 +28,7 @@
         },
         mounted() {
             this.$nextTick(() => {
-                console.log(this.pages);
+
             })
         },
         computed: {
