@@ -23,7 +23,7 @@
             };
         },
         mounted() {
-            console.log(this.swiperList)
+
         },
         computed: {
             showSwiper() {
