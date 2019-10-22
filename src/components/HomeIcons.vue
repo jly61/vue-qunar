@@ -16,60 +16,14 @@
 <script>
     export default {
         name: "HomeIcons",
+        props: {
+            iconList: {
+                Array
+            }
+        },
         data() {
             return {
-                iconList: [
-                    {
-                        id: '1',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                        title: '景点门票'
-                    },
-                    {
-                        id: '2',
-                        url: 'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-                        title: '成都海昌'
-                    },
-                    {
-                        id: '3',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-                        title: '情迷九寨'
-                    },
-                    {
-                        id: '4',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-                        title: '川剧变脸'
-                    },
-                    {
-                        id: '5',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                        title: '一日游'
-                    },
-                    {
-                        id: '6',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png',
-                        title: '稻城亚丁'
-                    },
-                    {
-                        id: '7',
-                        url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/338c5b924c5809e8c7b14f60a953c3e2.png',
-                        title: '成都欢乐谷'
-                    },
-                    {
-                        id: '8',
-                        url: 'http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png',
-                        title: '熊猫基地'
-                    },
-                    {
-                        id: '9',
-                        url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/02bbb71bd1f629c2348d0c97ef82c129.png',
-                        title: '青城山'
-                    },
-                    {
-                        id: '10',
-                        url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/f04285731d7121da1b9028e2bf431695.png',
-                        title: '都江堰'
-                    }
-                ]
+
             }
         },
         mounted() {

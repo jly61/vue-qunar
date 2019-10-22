@@ -1,7 +1,7 @@
 <template>
     <div>
-        <Swiper :showIndicator='true' class="swiper">
-            <Slide class="swiper-slide" v-for="item in imgList" :key="item.id">
+        <Swiper :showIndicator='true' class="swiper" v-if="showSwiper">
+            <Slide class="swiper-slide" v-for="item in swiperList" :key="item.id">
                 <img class="swiper-img" :src="item.url" :alt="item.alt">
             </Slide>
         </Swiper>
@@ -12,30 +12,22 @@
 <script>
     export default {
         name: "HomeSwiper",
+        props: {
+            swiperList: {
+                Array
+            }
+        },
         data() {
             return {
-                imgList: [
-                    {
-                        id: 1,
-                        url: require('../assets/stylus/images/swiper1.jpg'),
-                        alt: '国色天香'
-                    },
-                    {
-                        id: 2,
-                        url: require('../assets/stylus/images/swiper2.jpg'),
-                        alt: '百年好合'
-                    },
-                    {
-                        id: 3,
-                        url: require('../assets/stylus/images/swiper3.jpg'),
-                        alt: '演唱会门票'
-                    }
-                ]
+
             };
         },
         mounted() {
-            for (let i = 0; i < this.imgList; i++) {
-                console.log(this.imgList[i].url)
+            console.log(this.swiperList)
+        },
+        computed: {
+            showSwiper() {
+                return this.swiperList.length
             }
         }
     }

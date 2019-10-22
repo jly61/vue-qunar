@@ -117,7 +117,14 @@ module.exports = {
 
         hotOnly: false,
 
-        proxy: null,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                pathRewrite: {
+                    '^/api': '/mock'
+                }
+            }
+        },
 
         before: app => {
         }
