@@ -19,6 +19,7 @@
 
 <script>
     import BScroll from 'better-scroll'
+    import {mapActions} from 'vuex'
 
     export default {
         name: "Search",
@@ -70,11 +71,12 @@
         },
         methods: {
             handleCityClick(city) {
-                this.$store.dispatch('actionChangeCity', city);
+                this.actionChangeCity(city);
                 this.$router.push({
                     path: '/'
                 })
-            }
+            },
+            ...mapActions(['actionChangeCity'])
         }
     }
 </script>
