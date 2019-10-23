@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area" v-for="(alphabet, key) in cities" :key="key">
+            <div class="area" v-for="(alphabet, key) in cities" :key="key" :ref="key">
                 <div class="title border-bottom">{{key}}</div>
                 <div class="item-list" v-for="city in alphabet" :key="city.id">
                     <div class="item border-bottom">{{city.name}}</div>
@@ -29,16 +29,25 @@
 
 <script>
     import BScroll from 'better-scroll'
+
     export default {
         name: "List",
         props: {
             hotCities: Array,
-            cities: Object
+            cities: Object,
+            letter: String
         },
         mounted() {
             this.$nextTick(() => {
                 this.scroll = new BScroll(this.$refs.wrapper)
             })
+        },
+        watch: {
+            //监听字母，滚动到指定字母处
+            letter() {
+                const element = this.$refs[this.letter][0];
+                this.scroll.scrollToElement(element);
+            }
         }
     }
 </script>
@@ -49,6 +58,7 @@
     .border-bottom
         &:before
             border-color #ccc
+
     .list
         overflow hidden
         position absolute
@@ -56,15 +66,18 @@
         left 0
         right 0
         bottom 0
+
         .title
             line-height .44rem
             background #eee
             padding-left .2rem
             color #666
             font-size .26rem
+
         .button-list
             overflow hidden
             padding .1rem .6rem .1rem .1rem
+
             .button-wrapper
                 float: left;
                 width 33.33%
@@ -75,6 +88,7 @@
                     text-align center
                     border .02rem solid #ccc
                     border-radius .06rem
+
         .item-list
             .item
                 height .76rem
