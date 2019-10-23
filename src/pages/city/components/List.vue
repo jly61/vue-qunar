@@ -5,7 +5,7 @@
                 <div class="title border-bottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button">成都</div>
+                        <div class="button">{{this.$store.state.city}}</div>
                     </div>
                 </div>
             </div>
@@ -13,14 +13,14 @@
                 <div class="title border-bottom">热门城市</div>
                 <div class="button-list">
                     <div class="button-wrapper" v-for="hotCity in hotCities" :key="hotCity.id">
-                        <div class="button">{{hotCity.name}}</div>
+                        <div class="button" @click="handleCityClick(hotCity.name)">{{hotCity.name}}</div>
                     </div>
                 </div>
             </div>
             <div class="area" v-for="(alphabet, key) in cities" :key="key" :ref="key">
                 <div class="title border-bottom">{{key}}</div>
                 <div class="item-list" v-for="city in alphabet" :key="city.id">
-                    <div class="item border-bottom">{{city.name}}</div>
+                    <div class="item border-bottom" @click="handleCityClick(city.name)">{{city.name}}</div>
                 </div>
             </div>
         </div>
@@ -45,8 +45,23 @@
         watch: {
             //监听字母，滚动到指定字母处
             letter() {
-                const element = this.$refs[this.letter][0];
-                this.scroll.scrollToElement(element);
+                if(this.letter) {
+                    const element = this.$refs[this.letter][0];
+                    this.scroll.scrollToElement(element);
+                }
+            }
+        },
+        methods: {
+            //同步修改
+            // handleCityClick(city) {
+            //     this.$store.commit('changeCity', city)
+            // }
+            //异步修改
+            handleCityClick(city) {
+                this.$store.dispatch('actionChangeCity', city);
+                this.$router.push({
+                    path: '/'
+                })
             }
         }
     }
