@@ -79,6 +79,7 @@ module.exports = {
         config.resolve.alias
             .set('@', resolve('src'))
             .set('style', resolve('src/assets/stylus'))
+            .set('common', resolve('src/common'))
     },
 
     // 配置高于chainWebpack中关于 css loader 的配置

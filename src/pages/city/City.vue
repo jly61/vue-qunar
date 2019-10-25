@@ -22,13 +22,13 @@
             CitySearch,
             CityList,
             CityAlphabet,
-            lastCity: ''
         },
         data() {
             return {
                 hotCities: [],
                 cities: {},
-                letter: ''
+                letter: '',
+                lastCity: ''
             }
         },
         computed: {
