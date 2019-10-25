@@ -24,5 +24,9 @@ export default new Router({
             name: 'Detail',
             component: Detail
         }
-    ]
+    ],
+    //滚动行为
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+    }
 })

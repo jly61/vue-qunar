@@ -7,7 +7,7 @@
             <router-link tag="div" to="/" class="header-left" >
                 <div class="iconfont back-icon">&#xe611;</div>
             </router-link>
-            成都大熊猫繁育研究基地
+            {{detailTitle}}
         </div>
     </div>
 </template>
@@ -15,6 +15,9 @@
 <script>
     export default {
         name: "Header",
+        props: {
+            detailTitle: String
+        },
         data() {
             return {
                 showAbs: true,
