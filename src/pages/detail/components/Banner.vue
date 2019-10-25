@@ -5,10 +5,10 @@
                  src="http://img1.qunarzz.com/sight/p0/201309/24/977fea7b3c5cd758c8d65eac.jpg_600x330_0f80adad.jpg"
                  alt="">
             <div class="banner-info">
-                <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
+                <div class="banner-title">成都大熊猫繁育研究基地(AAAA景区)</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe647;</span>
-                    39
+                    {{images.length}}
                 </div>
             </div>
         </div>
