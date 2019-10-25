@@ -13,6 +13,7 @@
     import CitySearch from './components/Search'
     import CityList from './components/List'
     import CityAlphabet from './components/Alphabet'
+    import {mapState} from 'vuex'
 
     export default {
         name: "City",
@@ -20,7 +21,8 @@
             CityHeader,
             CitySearch,
             CityList,
-            CityAlphabet
+            CityAlphabet,
+            lastCity: ''
         },
         data() {
             return {
@@ -29,14 +31,26 @@
                 letter: ''
             }
         },
+        computed: {
+            ...mapState({
+                city: 'city'
+            })
+        },
         mounted() {
             this.$nextTick(() => {
+                this.lastCity = this.city;
                 this.getCityInfo();
             })
         },
+        activated() {
+            if(this.lastCity !== this.city) {
+                this.lastCity = this.city;
+                this.getCityInfo();
+            }
+        },
         methods: {
             getCityInfo() {
-                axios.get('/api/city.json').then(this.getCityInfoSuccess)
+                axios.get(`/api/city.json?city=${this.city}`).then(this.getCityInfoSuccess)
             },
             getCityInfoSuccess(res) {
                 if(res.data.status ===0) {
