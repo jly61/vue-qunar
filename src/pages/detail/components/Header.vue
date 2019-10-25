@@ -74,6 +74,7 @@
         color: #fff
         text-align center
         font-size .32rem
+        z-index 2
         .header-left
             position absolute
             width .64rem
