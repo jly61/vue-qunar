@@ -12,12 +12,16 @@
                 </div>
             </div>
         </div>
-        <common-gallery :images="galleryImages" v-if="showGallery" @close="handleGalleryClick"></common-gallery>
+        <fade-animation>
+            <common-gallery :images="galleryImages" v-if="showGallery" @close="handleGalleryClick"></common-gallery>
+        </fade-animation>
+
     </div>
 </template>
 
 <script>
     import CommonGallery from 'common/gallery/Gallery'
+    import FadeAnimation from 'common/fade/Fade'
     export default {
         name: "Banner",
         props: {
@@ -31,7 +35,8 @@
             }
         },
         components: {
-            CommonGallery
+            CommonGallery,
+            FadeAnimation
         },
         methods: {
             handleBannerClick() {
