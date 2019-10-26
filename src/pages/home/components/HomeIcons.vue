@@ -1,5 +1,5 @@
 <template>
-    <Swiper :showIndicator='false' class="swiper" :autoPlay="false">
+    <Swiper :showIndicator='false' class="swiper" :autoPlay="false" v-if="iconList">
         <Slide class="swiper-slide" v-for="(page, index) in pages" :key="index">
             <div class="icons">
                 <div class="icon" v-for="item in page" :key="item.id">
